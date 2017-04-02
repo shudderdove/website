@@ -30,6 +30,7 @@
 	<meta charset="utf-8" />
 </head>
 <body>
+	<img src="img/volunteer (2).png" alt="Front" style="width:806px;height:453px;">
 	<?php
 		echo "<p>Thank you for registering $fname.</p>"
 	?>
