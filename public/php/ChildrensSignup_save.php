@@ -33,13 +33,11 @@
 	// select rows that match
 	$statement2 = $pdo->prepare("SELECT fname, lname, email, city, state, about
 								 FROM volunteers
-								 WHERE city='?';");
+								 WHERE 'city' = :city");
 
-	$statement2->execute(array($city));
-
-	$statement2->execute();
+	$statement2->execute(array(':city' => "$city"));
 	$rows = $statement2->fetchAll();
-	die(var_dump($rows));
+	//die(var_dump($rows));
 ?>
 <!DOCTYPE html>
 <html lang="en">
