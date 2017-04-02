@@ -14,16 +14,16 @@
 <div class="ui container">
   <img src="img/Screen Shot.png" alt="Front" style="width:806px;height:453px;">
 
-    <form class='ui form' action="php/ChildrensSignup_save.php">
+    <form class='ui form' action="php/ChildrensSignup_save.php" method="post">
       First name: <input type="text" name="fname"><br>
       Last name: <input type="text" name="lname"><br>
       Email: <input type="text" name="email"><br>
       City: <input type="text" name="city"><br>
       State: <input type="text" name="state"><br>
-      About Me: <textarea rows="4" cols="50">
-</textarea>
-  <input type="submit" value="Submit">
-</form>
+      About Me: <textarea rows="4" cols="50" name="about">
+      </textarea>
+      <input type="submit" value="Submit">
+    </form>
 </div>
-  </body>
+</body>
 </html>

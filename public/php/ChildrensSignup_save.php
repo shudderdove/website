@@ -21,8 +21,26 @@
 	$state = $_POST['state'];
 	$about = $_POST['about'];
 
-?>
+	// insert values into the database
+	$statement = $pdo->prepare("
+		INSERT INTO parents 
+			(fname, lname, email, city, state, about)
+		VALUES (?, ?, ?, ?, ?, ?)");
 
+	$statement->execute(array($fname, $lname, $email, $city, $state, $about));
+
+
+	// select rows that match
+	$statement2 = $pdo->prepare("SELECT fname, lname, email, city, state, about
+								 FROM volunteers
+								 WHERE city='?';");
+
+	$statement2->execute(array($city));
+
+	$statement2->execute();
+	$rows = $statement2->fetchAll();
+	die(var_dump($rows));
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,9 +48,13 @@
 	<meta charset="utf-8" />
 </head>
 <body>
-	<img src="img/helping hand(3).png" alt="Front" style="width:806px;height:453px;">
+	<img src="../img/helping hand(3).png" alt="Front" style="width:806px;height:453px;">
 	<?php
 		echo "<p>Thank you for registering with us $fname.</p>"
+		
+		/*foreach ($row as $key => $value) {
+			echo ""
+		*/
 	?>
 </body>
 </html>
