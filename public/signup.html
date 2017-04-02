@@ -11,18 +11,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
   </head>
   <body>
-<div class="ui container">
-  <img src="Screen Shot 2017-04-02 at 3.28.13 AM.png" alt="Front" style="width:806px;height:453px;">
-    <form class='ui form' action="/action_page.php">
-  First name: <input type="text" name="first name"><br>
-  Last name: <input type="text" name="last name"><br>
-  Email: <input type="text" name="email name"><br>
-  City: <input type="text" name="city name"><br>
-  State: <input type="text" name="state name"><br>
-  About Me: <textarea rows="4" cols="50">
-</textarea>
-  <input type="submit" value="Submit">
-</form>
-</div>
+  <div class="ui container">
+    <img src="img/Screen Shot 2017-04-02 at 3.28.13 AM.png" alt="Front" style="width:806px;height:453px;">
+    
+    <form class='ui form' action="php/signup_save.php" method="post">
+      First name: <input type="text" name="fname"><br>
+      Last name: <input type="text" name="lname"><br>
+      Email: <input type="text" name="email"><br>
+      City: <input type="text" name="city"><br>
+      State: <input type="text" name="state"><br>
+      About Me: <textarea rows="4" cols="50" name="about">
+      </textarea>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
   </body>
 </html>
