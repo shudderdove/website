@@ -21,7 +21,7 @@
 	$state = $_POST['state'];
 	$about = $_POST['about'];
 
-	$statement = $pdo->prepare("INSERT INTO volunteers 
+	$statement = $pdo->prepare("INSERT INTO volunteers
 			(fname, lname, email, city, state, about)
 		VALUES (?, ?, ?, ?, ?, ?)");
 
@@ -37,7 +37,7 @@
 <body>
 	<img src="../img/volunteer(2).png" alt="Front" style="width:806px;height:453px;">
 	<?php
-		echo "<p>Thank you for registering $fname.</p>"
+		echo "<h1 style=\"text-align: center;\">$fname.</h1>"
 	?>
 </body>
 </html>
