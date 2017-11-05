@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>RPG</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function random_2(){
+        var myrandom=Math.round(Math.random()*2)
+        var patha="pagethirteen.html"
+        var pathb="pagefourteen.html"
+        var img="img/jengastory.png"
+        if (myrandom==0)
+            window.location=patha
+        else if (myrandom==1)
+            window.location=pathb
+          }
+        if(mouseIsClicked){
+          random_2();
+        }
+      </script>
+  </head>
+  <body>
+    <header>
+      <img src="img/jengastory.png" alt="Back" style="width:1200px;height:750px;" onclick="random_2();">
+      <!--REPLACE THE '#' WITH THE FILE NAME!!!!-->
+        <div class="MainNavigation">
+          <h1 class="HeadingTitle">RPG</h1>
+          <nav  class="navbar navbar-light" alt="Front">
+            <div id="links">
+              <ul class="HeadingList">
+                <li><a href="index.html">Home</li>
+                <li><a href="StartRPG.html">Start</li>
+                <li><a href="hackathoncreed.html">Hackathon Creed</li>
+                <li><a href="anatomyofhacker.html">Anatomy of a Hacker</li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+  </body>
+</html>
+<!-- -->
